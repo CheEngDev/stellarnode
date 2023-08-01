@@ -3,7 +3,7 @@ const router = express.Router();
 const { validateMessage, Message } = require("../models/message");
 const auth = require("../middleware/auth");
 
-router.get("/", auth, async (req, res) => {
+router.get("/", async (req, res) => {
   const message = await Message.find({});
 
   res.send(message);
