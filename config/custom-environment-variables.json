@@ -1,3 +1,4 @@
 {
-  "jwtPrivateKey": "stellar_jwtPrivateKey"
+  "jwtPrivateKey": "stellar_jwtPrivateKey",
+  "db":""
 }

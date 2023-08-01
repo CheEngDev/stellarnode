@@ -144,3 +144,5 @@
 {"level":"info","message":"connected to mongodb://localhost:27017/stellarsmiles"}
 {"level":"info","message":"Listening on port 3000"}
 {"level":"info","message":"connected to mongodb://localhost:27017/stellarsmiles"}
+{"level":"info","message":"Listening on port 3000"}
+{"level":"info","message":"connected to mongodb://localhost:27017/stellarsmiles"}
