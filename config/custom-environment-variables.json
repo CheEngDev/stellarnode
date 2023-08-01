@@ -1,4 +1,4 @@
 {
   "jwtPrivateKey": "stellar_jwtPrivateKey",
-  "db":""
+  "db":"stellar_db"
 }
