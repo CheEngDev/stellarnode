@@ -20,4 +20,5 @@ router.post("/", async (req, res) => {
   res.send(_.pick(user, ("_id", "email")));
 });
 
+console.log("hello")
 module.exports = router;
