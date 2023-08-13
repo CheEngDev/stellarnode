@@ -3,7 +3,7 @@ const router = express.Router();
 const { Booking, validateBooking } = require("../models/booking");
 const auth = require("../middleware/auth");
 
-router.get("/", auth, async (req, res) => {
+router.get("/", async (req, res) => {
   const booking = await Booking.find({});
   res.send(booking);
 });
