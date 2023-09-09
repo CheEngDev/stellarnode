@@ -2,6 +2,7 @@ const mongoose = require("mongoose");
 const Joi = require("joi");
 const jwt = require("jsonwebtoken");
 const config = require("config");
+require("dotenv").config();
 
 const userSchema = new mongoose.Schema({
   email: {
@@ -19,12 +20,20 @@ const userSchema = new mongoose.Schema({
   },
 });
 
+function returnjwtPrivateKey() {
+  if (process.env.NODE_ENV === "development") {
+    return process.env.jwtPrivateKey;
+  } else {
+    return process.env.stellarprivate;
+  }
+}
+
 userSchema.methods.generateToken = function () {
   return (token = jwt.sign(
     {
       _id: this._id,
     },
-    config.get("jwtPrivateKey")
+    returnjwtPrivateKey()
   ));
 };
 
